@@ -103,7 +103,7 @@ async function copyToClipboard() {
 
 
 // Créer l'URL complète à afficher
-const fullShortUrl = computed(() => `http://localhost:5173/${shortUrl.value}`);
+const fullShortUrl = computed(() => `https://femiurls.netlify.app/${shortUrl.value}`);
 </script>
 
 
