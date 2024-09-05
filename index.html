@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fèmi Shortify</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body style="font-family: 'DM Sans'">
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
+      import { getFirestore } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyCnaTC3l4OxgQnX5VLUWIs1ODp9uF43x8U",
+        authDomain: "femiurls.firebaseapp.com",
+        projectId: "femiurls",
+        storageBucket: "femiurls.appspot.com",
+        messagingSenderId: "513835173829",
+        appId: "1:513835173829:web:8aae11657c3767a1812dac",
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+
+      window.firebase = {
+        app,
+        db,
+      };
+    </script>
+  </body>
+</html>
